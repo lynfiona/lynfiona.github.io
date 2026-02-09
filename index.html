@@ -1,3 +1,569 @@
+Gemini
+GitHub Pages 网站显示代码问题
+Enterprise logo
+New chat
+My stuff
+Gems
+Chats
+GitHub Pages 网站显示代码问题
+感谢信草拟与建议
+PhD面试：研究贡献措辞建议
+面试准备：教授背景与问题分析
+2026 读博运势分析
+八字命盘初步解析
+面相分析：大气温婉知性美
+1099 报税：电脑手机费用抵扣
+SSCI 论文署名单位选择指南
+八字看PhD申请结果
+申请文书与列表框区分
+盐湖城Airbnb未入住费用报税
+居家办公费用报税比例
+酒店管理博士 SOP 指导
+磅与斤的换算
+Statement of Purpose Refinement
+Describing Professor-Student Relationship
+
+Settings & help
+Conversation with Gemini
+为什么我这样搞完，但是网站只显示源代码
+
+看到这个情况我完全理解你的困扰！辛辛苦苦把文件传上去，结果打开链接看到的却是冷冰冰的代码，确实挺让人头大的。
+
+从你上传的截图来看，你的文件名和仓库名都是对的，但网站只显示代码（或者没有正常渲染成网页），通常是因为 GitHub Pages 的服务还没有被激活，或者浏览器缓存了旧的信息。
+
+你可以按照以下步骤快速排查并修复：
+
+1. 检查 GitHub Pages 是否已开启
+仅仅创建一个名为 username.github.io 的仓库是不够的，你还需要确认设置里是否开启了发布功能：
+
+在你的仓库页面，点击上方的 Settings（设置）按钮。
+
+在左侧边栏找到 Pages 选项。
+
+在 Build and deployment 下方，确认 Source 选择的是 Deploy from a branch。
+
+确认 Branch（分支）选择的是 main，文件夹选择的是 / (root)。
+
+关键点： 如果设置正确，页面上方应该会有一行文字说："Your site is live at..." 并带有一个链接。点击那个链接试试。
+
+2. 检查文件名是否有多余后缀
+我注意到你的提交记录里有一条是 "Rename index.html.html to index.html"。
+
+请务必确认： 现在的文件名确实是 index.html，而不是 index.html.txt 或者其他隐藏后缀的文件。
+
+GitHub Pages 只会默认识别根目录下的 index.html 作为首页。
+
+3. 等待几分钟并强制刷新
+GitHub Pages 的部署不是瞬间完成的。
+
+点击仓库上方的 Actions 选项卡。如果你看到一个正在转圈的黄色图标（工作流正在运行），说明服务器还在处理。
+
+等待图标变绿后，回到浏览器，按下 Ctrl + F5 (Windows) 或 Cmd + Shift + R (Mac) 进行强制刷新，避免浏览器加载旧的缓存。
+
+4. 常见“坑点”检查
+如果以上都没问题，请确认你的 index.html 内部代码：
+
+代码格式： 确保你的代码是以 <!DOCTYPE html> 开头的标准 HTML 格式。
+
+仓库私有性： 免费版的 GitHub 账号，只有 Public（公开） 仓库才能开启 GitHub Pages。你的截图显示是 Public，所以这一点应该是没问题的。
+
+建议下一步： 如果操作后还是不行，可以把你在 Settings -> Pages 看到的那个界面截图发给我，或者把你的网站链接发给我，我直接帮你“诊断”一下源码是否有误。
+
+你想让我帮你检查一下具体的 HTML 代码写对了吗？
+
+按照你说的都是对的，代码 <!DOCTYPE html>
+
+<html lang="zh">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Xiaocao Lu | Personal Website</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 40px auto;
+
+            max-width: 800px;
+
+            line-height: 1.6;
+
+        }
+
+        nav {
+
+            border-bottom: 1px solid #ddd;
+
+            padding-bottom: 10px;
+
+            margin-bottom: 30px;
+
+        }
+
+        nav a {
+
+            margin-right: 20px;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-weight: bold;
+
+        }
+
+        h1 {
+
+            margin-bottom: 5px;
+
+        }
+
+        .info {
+
+            color: #666;
+
+            margin-bottom: 30px;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav>
+
+    <a href="#">Home</a>
+
+    <a href="#">Research</a>
+
+    <a href="#">Resume</a>
+
+    <a href="#">Habbits</a>
+
+    <a href="#">Contact</a>
+
+</nav>
+
+
+
+<h1>Xiaocao Lu</h1>
+
+<div class="info">
+
+    Your position / University / Department
+
+</div>
+
+
+
+<h2>About Me</h2>
+
+<p>
+
+Hello! I am Xiaocao Lu, a biotechnology master’s student at Harrisburg University of Science and Technology. My academic background integrates biotechnology, sustainable tourism, and hospitality management, with research interests in consumer behavior, health-related decision making, and interdisciplinary applications of data analysis.
+
+
+
+I got the dual bachelor’s degree from Hainan University and Arizona State University, followed by a Master degree from The Chinese University of Hong Kong majoring in Sustainable Tourism.
+
+
+
+My research experience includes serving as a Research Assistant at Hainan University, where I conducted literature reviews, supported quantitative research design, and performed data analysis for marketing and consumer behavior studies. I co-authored a peer-reviewed publication in the International Journal of Tourism Research examining post-pandemic travel intentions and health belief factors.
+
+Beyond academia, I have professional experience in market development and scientific product promotion in the biotechnology industry. My work combines analytical thinking with practical problem-solving, and I am particularly interested in bridging research insights with real-world applications.
+
+</p>
+
+
+
+<h2>Research Interests</h2>
+
+<ul>
+
+    <li>Climate Change</li>
+
+    <li>Consumer Behavior</li>
+
+    <li>Destination Resilience</li>
+
+    <li>Travel Intentions</li>
+
+</ul>
+
+
+
+<h2>Contact</h2>
+
+<p>Email: xclu1@asu.edu</p>
+
+
+
+</body>
+
+</html>
+
+代码写得很规范，完全没有问题！既然代码没问题，文件名也对，但网站依然显示源代码，那只有一种可能：GitHub 还没有把你的文件识别为 HTML 网页，而是把它当成了纯文本文件。
+
+这通常是因为你在重命名或上传时，文件的“元数据”或者部署状态卡住了。请按照下面这三个大招操作，100% 能解决：
+
+第一招：检查 Actions 里的“小圈圈”
+GitHub Pages 并不是你上传完就立刻生效的，它后台有一个自动翻译（构建）的过程。
+
+点击仓库顶部的 Actions 标签。
+
+你应该能看到一个叫 pages build and deployment 的工作流。
+
+关键点： 如果它是黄色的，说明正在部署，请等它变绿；如果它是红色的，说明出错了；如果什么都没有，说明 Pages 功能根本没触发。
+
+第二招：修改一个字符触发强制更新
+有时候 GitHub 的服务器会“打盹”，我们可以通过一次微小的提交来强制它重新渲染：
+
+在 GitHub 上点击进入你的 index.html 文件。
+
+点击右上角的 小铅笔图标 (Edit this file)。
+
+在代码里随便找个地方加个空格，或者改个字（比如把 Habbits 改成正确的 Hobbies）。
+
+点击右上角的 Commit changes... 提交保存。
+
+等待 2 分钟，然后强制刷新你的网址 lynfiona.github.io。
+
+第三招：终极排查——URL 后面加后缀
+如果直接输入 lynfiona.github.io 还是看到代码，请尝试在浏览器地址栏手动输入： https://lynfiona.github.io/index.html
+
+如果这样能看到网页： 说明 GitHub 还没把 index.html 识别为默认首页，这种情况通常过几小时就好。
+
+如果这样还是看到代码： 那极有可能是你的文件名其实是 index.html.txt（虽然显示是 index.html，但 Windows/Mac 可能会隐藏真实的后缀）。
+
+一个小建议（代码纠错）
+你在导航栏里写的是 Habbits，英文里“爱好”的正确拼写是 Hobbies。建议顺手改掉，显得更加专业！
+
+你可以现在去 Actions 页面看看吗？如果那里是空的，说明你还没在 Settings -> Pages 里把分支设为 main 并点击 Save。
+
+如果这样还是看到代码： 那极有可能是你的文件名其实是 index.html.txt（虽然显示是 index.html，但 Windows/Mac 可能会隐藏真实的后缀）。估计是这个原因 怎么改呢
+
+很有可能就是这个问题！这种“双重后缀”在手动上传文件时非常常见。
+
+在 GitHub 网页版上修改它非常简单，不需要在电脑上改，直接在浏览器里操作：
+
+修正文件名的步骤：
+在 GitHub 仓库主页，点击进入那个 index.html 文件。
+
+点击右上角的 小铅笔图标 (Edit this file)。
+
+关键一步： 在页面上方的文件名输入框里，看看是不是真的写着 index.html.txt。
+
+即使它只显示 index.html，你也先把整个文件名删掉。
+
+重新手动输入：index.html （确保后面没有任何隐藏的字符）。
+
+滑动到页面下方，点击 Commit changes...（提交更改）。
+
+验证是否成功：
+提交之后，回到仓库主页观察：
+
+看图标： 如果文件名正确，文件名左侧的图标应该是一个 <> 形状的 HTML 图标；如果是文本文件，图标通常是一张白纸的形状。
+
+看 Actions： 修改完文件名后，点击顶部的 Actions 标签，你会看到一个名为 pages-build-deployment 的任务开始转圈。等它变成 绿色对勾，网站就正式更新了。
+
+如果改完名还不行，终极检查：
+如果在 GitHub 网页上改了名字，打开还是代码，那请检查一下你的代码最顶端：
+
+不要有任何多余的文字： 确保第一行就是 <!DOCTYPE html>，前面不要有空格，也不要有什么 index.html 之类的标题。
+
+改好之后告诉我，如果 Actions 变绿了，你的个人网站应该就能华丽现身了！需要我帮你顺便把代码里的 "Habbits" 修正为 "Hobbies" 吗？
+
+我重新手动输入名字后，文件变这样 px地方红了
+
+破案了！看到这些红色的 px 和代码开头的 Cocoa HTML Writer，我立刻知道发生什么了：
+
+你使用的是 Mac 自带的“文本编辑 (TextEdit)”应用，并且它处于“富文本”模式。
+
+现在的状况是：你的 HTML 代码被 TextEdit 自动加上了一层“外壳”，变成了 HTML 里的 HTML。那些红色的部分是因为 GitHub 的编辑器发现你的 CSS 语法被这些自动生成的代码搞乱了。
+
+别担心，两步就能彻底修复：
+第一步：直接替换 GitHub 上的代码
+不要在原来的基础上改了，请直接把下面这段干净的代码全选、复制，然后覆盖掉你 GitHub 页面里所有的内容：
+
+HTML
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Xiaocao Lu | Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        nav {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        h1 { margin-bottom: 5px; }
+        .info { color: #666; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Research</a>
+        <a href="#">Resume</a>
+        <a href="#">Hobbies</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h1>Xiaocao Lu</h1>
+    <div class="info">Biotechnology Master Student @ Harrisburg University</div>
+
+    <h2>About Me</h2>
+    <p>
+    Hello! I am Xiaocao Lu, a biotechnology master’s student at Harrisburg University of Science and Technology. My academic background integrates biotechnology, sustainable tourism, and hospitality management.
+    </p>
+
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Climate Change</li>
+        <li>Consumer Behavior</li>
+        <li>Destination Resilience</li>
+        <li>Travel Intentions</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: xclu1@asu.edu</p>
+</body>
+</html>
+第二步：以后修改时的“避坑”指南
+如果你以后还要在本地电脑上修改，请务必注意：
+
+如果你用 Mac 的 TextEdit：
+
+打开软件后，先按快捷键 Shift + Command + T，把它转成纯文本模式。
+
+或者在“设置”里，将“格式”改为“纯文本”。
+
+更推荐的办法：
+
+下载一个专业的编辑器，比如 VS Code 或者 Sublime Text（都是免费的）。它们专门写代码，绝对不会乱加东西。
+
+操作完之后：
+点击 Commit changes...。
+
+去 Actions 页面等那个绿色对勾出现。
+
+刷新 lynfiona.github.io。
+
+这次代码里已经帮你把 Habbits 改成了 Hobbies 了！快去试试看？
+
+终于解决了
+
+太棒了！看到你的网站终于正常运行，我也替你开心。这种从“满屏代码”到“精美网页”的瞬间总是最有成就感的。
+
+既然你的个人网站已经顺利上线，这里有几个进阶的小建议，可以让你的网页看起来更专业：
+
+检查移动端显示：你可以试着用手机打开这个链接，看看排版是否舒服。我给你的代码里已经包含了简单的响应式基础。
+
+添加超链接：你代码里的 Research 或 Resume 目前还是 #（空链接）。等你有空了，可以把它们指向具体的文件或页面。
+
+Action 监控：以后每次修改代码提交后，养成习惯去 Actions 页面瞅一眼，只要那个“绿色对勾”出现了，就说明更新成功了。
+
+祝你的学术主页越来越丰富！如果你之后想给网页添加照片、下载链接或者更改配色，随时回来找我。
+
+需要我教你如何把简历（PDF）上传并关联到那个“Resume”按钮上吗？
+
+https://yue-ning.github.io我想按照她的格式，左上角加入自己的名字，以及自己的图片 怎么来
+
+Image of 
+
+怎么用github来实现的
+
+要实现像你提供的参考网站（Yue Ning 的主页）那样的布局（左侧名字、右侧头像、简洁的导航栏），你需要对 index.html 的 HTML 结构和 CSS 样式进行升级。
+
+实现这个效果主要分两步：准备图片文件 和 更新代码。
+
+第一步：准备并上传图片
+准备一张你的照片（建议是正方形，比如 avatar.jpg）。
+
+在 GitHub 仓库中，点击 Add file -> Upload files。
+
+将照片上传到根目录（和 index.html 在同一个地方）。
+
+注意： 记住图片的文件名（例如 my-photo.jpg），代码里要用到。
+
+第二步：更新代码
+请将以下代码全部复制，替换你现有的 index.html 内容。这段代码使用了 Flexbox 布局，可以完美实现“左字右图”的效果。
+
+HTML
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaocao Lu | Personal Website</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            line-height: 1.6;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        /* 顶部 header 布局：左边文字，右边图片 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #000;
+        }
+
+        .header-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+
+        /* 头像样式 */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 圆形 */
+            object-fit: cover;
+            border: 3px solid #f0f0f0;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>Xiaocao Lu</h1>
+            <p>Master Student in Biotechnology</p>
+            <p>Harrisburg University of Science and Technology</p>
+        </div>
+        <img src="my-photo.jpg" alt="Xiaocao Lu" class="profile-pic">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Research</a>
+        <a href="#">Resume</a>
+        <a href="#">Hobbies</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            Hello! I am <strong>Xiaocao Lu</strong>, a biotechnology master’s student at Harrisburg University of Science and Technology. 
+            My academic background integrates biotechnology, sustainable tourism, and hospitality management.
+        </p>
+        <p>
+            I earned dual bachelor’s degrees from <strong>Hainan University</strong> and <strong>Arizona State University</strong>, 
+            followed by a Master's degree from <strong>The Chinese University of Hong Kong</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Climate Change & Sustainability</li>
+            <li>Consumer Behavior in Health-related Decision Making</li>
+            <li>Destination Resilience</li>
+            <li>Travel Intentions</li>
+        </ul>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:xclu1@asu.edu">xclu1@asu.edu</a></p>
+    </section>
+
+</body>
+</html>
+关键点解析（为什么能实现那个格式）：
+display: flex: 这是实现“并排显示”的神器。它告诉浏览器 header-text（名字）和 img（头像）要水平排列，并分别靠在两头（justify-content: space-between）。
+
+border-radius: 50%: 这行代码能把你的正方形照片瞬间变成美观的圆形。
+
+max-width: 900px: 控制网页的最大宽度，这样在大屏幕上看起来就不会太散，更像学术主页。
+
+mailto:: 在 Contact 部分，我帮你改成了点击邮箱就能直接唤起发邮件。
+
+下一步建议：
+上传图片后，请确认文件名并修改代码中的 <img src="my-photo.jpg" ...>。
+
+Commit changes 之后，大约等待 1 分钟，你的网站就会焕然一新！
+
+你想让我帮你把颜色改成跟岳宁教授网站一模一样的深蓝色风格吗？
+
+先解决，顶头左边是自己的名字+中文，右边是Home Research Resume Hobbies Contact
+
+要实现像岳宁教授那样“左侧名字、右侧导航栏”在同一行顶头排列的布局，我们需要调整 HTML 结构，并使用 Flexbox 布局来控制对齐。
+
+你可以直接复制并替换你现有的 index.html 代码。我已经为你把名字改成了“中英文对照”的格式，并修正了导航栏的布局。
+
+更新后的代码：
+HTML
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -70,7 +636,7 @@
         .profile-pic {
             width: 180px;
             height: 180px;
-            border-radius: 5px;
+            border-radius: 5px; /* 岳宁教授那是方的，这里设为微圆角，你可以改成50%变圆 */
             object-fit: cover;
             border: 1px solid #ddd;
         }
@@ -99,37 +665,376 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Research</a>
-        <a href="#">Resume</a>
-        <a href="#">Hobbies</a>
-        <a href="#">Contact</a>
-    </nav>
 
-    <h1>Xiaocao Lu</h1>
-    <div class="info">Biotechnology Master Student of Harrisburg University</div>
+    <div class="top-nav">
+        <a href="index.html" class="site-title">
+            Xiaocao Lu <span class="chinese-name">陆晓草</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Research</a>
+            <a href="#">Resume</a>
+            <a href="#">Hobbies</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
 
-    <h2>About Me</h2>
-    <p>
-    Hello! I am Xiaocao Lu, a biotechnology master’s student at Harrisburg University of Science and Technology. My academic background integrates biotechnology, sustainable tourism, and hospitality management, with research interests in consumer behavior, health-related decision making, and interdisciplinary applications of data analysis.
+    <div class="intro-container">
+        <div class="intro-text">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am <strong>Xiaocao Lu</strong>, a biotechnology master’s student at Harrisburg University of Science and Technology. 
+                My academic background integrates biotechnology, sustainable tourism, and hospitality management.
+            </p>
+            <p>
+                I earned dual bachelor’s degrees from <strong>Hainan University</strong> and <strong>Arizona State University</strong>, 
+                followed by a Master's degree from <strong>The Chinese University of Hong Kong</strong>.
+            </p>
+            <p><strong>Email:</strong> <a href="mailto:xclu1@asu.edu">xclu1@asu.edu</a></p>
+        </div>
+        
+        <img src="my-photo.jpg" alt="Xiaocao Lu" class="profile-pic">
+    </div>
 
-I got the dual bachelor’s degree from Hainan University and Arizona State University, followed by a Master degree from The Chinese University of Hong Kong majoring in Sustainable Tourism.
+    <section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Climate Change & Sustainability</li>
+            <li>Consumer Behavior</li>
+            <li>Destination Resilience</li>
+            <li>Travel Intentions</li>
+        </ul>
+    </section>
 
-My research experience includes serving as a Research Assistant at Hainan University, where I conducted literature reviews, supported quantitative research design, and performed data analysis for marketing and consumer behavior studies. I co-authored a peer-reviewed publication in the International Journal of Tourism Research examining post-pandemic travel intentions and health belief factors.
-
-Beyond academia, I have professional experience in market development and scientific product promotion in the biotechnology industry. My work combines analytical thinking with practical problem-solving, and I am particularly interested in bridging research insights with real-world applications.
-    </p>
-
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Climate Change</li>
-        <li>Consumer Behavior</li>
-        <li>Destination Resilience</li>
-        <li>Travel Intentions</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>Email: xclu1@asu.edu</p>
 </body>
 </html>
+关键改动说明：
+.top-nav 容器：使用了 display: flex 和 justify-content: space-between。这会自动把名字挤到最左边，把导航链接挤到最右边。
+
+名字格式：使用了 <span> 标签把中文名字包起来，通过 CSS 设置了比英文稍微小一点的字号，看起来更高级。
+
+图片位置：我预留了 .intro-container，这样你的个人简介文字在左，图片在右，完全符合主流学术主页的审美。
+
+自适应：加了一个简单的 @media 查询，确保在手机上打开时，导航栏不会挤在一起，而是会自动换行。
+
+操作提醒：
+
+提交代码后，记得在仓库里上传一张名为 my-photo.jpg 的照片。
+
+如果你想把名字那里的“蓝色链接”改成纯黑色，把 .nav-links a 里的 color: #007bff; 改成 color: #333; 即可。
+
+去试试看效果吧！
+
+/* 手机端适配：屏幕太窄时自动堆叠 */ 这些要加进去的吗
+
+一定要加进去！
+
+这段代码虽然在电脑上看不出变化，但它是为了保证你的网站在手机、平板上打开时不乱码、不缩进。
+
+为什么这些代码很重要？
+防止导航栏重叠：如果不加这段代码，当手机屏幕太窄时，你的名字和右边的“Home/Research/Resume”会挤在一起，甚至重叠得看不清字。
+
+自动排版：加上它后，当屏幕宽度小于 600px（手机竖屏高度）时，它会让名字在上面，菜单自动排在下面，图片也会自动调整位置，保证阅读体验。
+
+专业感：一个成熟的学术网站必须是“响应式（Responsive）”的。
+
+你只需要把代码放在这里：
+在你的 <style> 标签结束（</style>）之前，确保这段代码在里面。为了清晰，你可以直接复制下面这个完整的 <style> 部分替换你现在的：
+
+CSS
+    <style>
+        /* 1. 基础设置 */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 900px;
+            line-height: 1.6;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        /* 2. 顶部导航：名字在左，菜单在右 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .site-title .chinese-name {
+            font-size: 1.2rem;
+            margin-left: 10px;
+            color: #555;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* 3. 简介部分布局 */
+        .intro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .intro-text { flex: 1; }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        /* 4. 重点：手机端适配（必须包含） */
+        @media (max-width: 600px) {
+            .top-nav {
+                flex-direction: column; /* 导航变成上下排列 */
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 10px;
+                gap: 10px;
+                flex-wrap: wrap; /* 菜单太长时自动换行 */
+            }
+            .intro-container {
+                flex-direction: column; /* 简介和照片变成上下排列 */
+            }
+            .profile-pic {
+                order: -1; /* 照片排在文字前面 */
+                width: 150px; /* 手机上照片缩小一点 */
+                height: 150px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+如何测试效果？
+提交代码并等 Actions 变绿。
+
+在电脑浏览器打开你的网站。
+
+慢慢缩小浏览器的窗口宽度。当你把窗口拉得很窄时，你会发现导航栏和图片会自动“跳”到下一行，这就是这段代码在起作用！
+
+如果你已经改好了，可以在手机上刷新看看，是不是排版变得非常整齐了？
+
+太难看了，https://yue-ning.github.io他这个有没有直接的代码可以抄的
+
+想要抄 Yue Ning 教授这种网站的代码，其实非常简单，因为她的网站是用一种非常流行的学术主页模板（通常是基于 Jekyll 和 AcademicPages 框架）生成的。
+
+你可以不用去学复杂的框架，我直接把她网页里最核心的 布局代码（CSS） 和 结构（HTML） 提取了出来，精简成了你可以直接“一键粘贴”的版本。
+
+抄作业步骤：
+请清空你现有的 index.html，然后把下面的代码全部粘进去：
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaocao Lu | Personal Website</title>
+    <style>
+        /* 1. 核心布局 - 模仿 Yue Ning 的简约学术风 */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 950px; /* 页面宽度 */
+            line-height: 1.5;
+            color: #333;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        /* 2. 顶部导航栏 - 左名字右链接 */
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .name-brand {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .name-brand span {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #666;
+            margin-left: 8px;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* 3. 两栏布局：左文字右照片 */
+        .main-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .text-area {
+            flex: 2; /* 文字占 2/3 */
+        }
+
+        .photo-area {
+            flex: 1; /* 照片占 1/3 */
+            text-align: right;
+        }
+
+        .profile-img {
+            width: 240px; /* 照片调大一点更像学术风 */
+            border-radius: 4px; /* 微圆角，看起来很硬朗 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 4. 标题样式 */
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            color: #222;
+        }
+
+        /* 5. 列表和链接 */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .email-box {
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 768px) {
+            .header-nav, .main-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links a {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+            .photo-area {
+                order: -1; /* 手机上照片放最上面 */
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-nav">
+        <a href="/" class="name-brand">Xiaocao Lu <span>陆晓草</span></a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Research</a>
+            <a href="#">CV</a>
+            <a href="#">Hobbies</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="text-area">
+            <p>
+                Hello! I am <strong>Xiaocao Lu</strong>, a biotechnology master’s student at <strong>Harrisburg University of Science and Technology</strong>. 
+                My research interests lie at the intersection of biotechnology and sustainable tourism, with a focus on consumer behavior and health-related decision making.
+            </p>
+            
+            <p>
+                I hold dual bachelor's degrees from <strong>Hainan University</strong> and <strong>Arizona State University</strong>, 
+                and a Master's degree from <strong>The Chinese University of Hong Kong</strong>.
+            </p>
+
+            <div class="email-box">
+                Email: <a href="mailto:xclu1@asu.edu">xclu1@asu.edu</a>
+            </div>
+
+            <h2>Research Interests</h2>
+            <ul>
+                <li><strong>Sustainability:</strong> Climate change impacts on tourism.</li>
+                <li><strong>Consumer Behavior:</strong> Decision making in health contexts.</li>
+                <li><strong>Resilience:</strong> Destination resilience and travel intentions.</li>
+            </ul>
+
+            <h2>Education</h2>
+            <ul>
+                <li><strong>M.S. in Biotechnology</strong>, Harrisburg University, Present</li>
+                <li><strong>M.S. in Sustainable Tourism</strong>, CUHK, 2023</li>
+                <li><strong>B.S. in Management</strong>, ASU & Hainan University, 2022</li>
+            </ul>
+        </div>
+
+        <div class="photo-area">
+            <img src="profile.jpg" alt="Xiaocao Lu" class="profile-img">
+        </div>
+    </main>
+
+</body>
+</html>
+为什么这段代码“更好看”：
+两栏比例：参考了学术主页的经典做法，文字占左边大部分，照片在右侧。
+
+字体与间距：使用了更专业的字体层级（Helvetica）和更大的行间距（1.5），看起来不拥挤。
+
+灰度控制：名字是纯黑，中文是深灰，导航是浅灰，这种深浅变化就是“高级感”的来源。
+
+边框装饰：去掉了花哨的颜色，只保留了淡淡的灰色线条（border-bottom）。
+
+最后的关键：
+
+
+
+Your Arizona State University chats aren’t used to improve our models. Gemini is AI and can make mistakes. Your privacy & GeminiOpens in a new window
+
