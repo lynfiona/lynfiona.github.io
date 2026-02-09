@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaocao Lu | Personal Website</title>
     <style>
-        /* 1. 整体页面设置 */
+        /* 1. 全局字体调整 - 模仿 Yue Ning 的学术衬线风 */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            /* Georgia 是学术网页最经典的高级字体 */
+            font-family: Georgia, "Times New Roman", Times, serif; 
             margin: 0 auto;
-            max-width: 950px; /* 页面宽度 */
-            line-height: 1.6;
+            max-width: 950px;
+            line-height: 1.7;
             color: #333;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background-color: #fff;
         }
 
@@ -20,36 +21,39 @@
         .header-nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
+            align-items: baseline;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
             margin-bottom: 50px;
         }
 
         .name-brand {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #000;
             text-decoration: none;
+            /* 确保名字是衬线体，首字母大写 */
         }
 
         .name-brand .chinese {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: normal;
-            color: #666;
+            color: #777;
             margin-left: 10px;
         }
 
         .nav-links a {
+            font-family: Arial, sans-serif; /* 导航用无衬线体更清晰 */
             margin-left: 25px;
             text-decoration: none;
-            color: #555;
-            font-size: 1.05rem;
-            transition: color 0.3s;
+            color: #666;
+            font-size: 1rem;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: #007bff; /* 悬停时变蓝 */
+            color: #000;
+            border-bottom: 1px solid #333;
         }
 
         /* 3. 两栏布局：左文右图 */
@@ -60,33 +64,29 @@
         }
 
         .text-area {
-            flex: 2; /* 文字占更多空间 */
+            flex: 2;
         }
 
         .photo-area {
-            flex: 1; /* 图片占位 */
+            flex: 1;
             text-align: right;
         }
 
         .profile-img {
-            width: 260px; /* 调整照片大小 */
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #f0f0f0;
+            width: 250px;
+            border-radius: 2px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
 
-        /* 4. 正文内容样式 */
+        /* 4. 标题与正文样式 */
         h2 {
-            font-size: 1.5rem;
-            margin-top: 40px;
+            font-size: 1.6rem;
+            margin-top: 45px;
             margin-bottom: 15px;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 5px;
-            color: #222;
-        }
-
-        p {
-            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            color: #000;
         }
 
         ul {
@@ -94,21 +94,31 @@
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        .contact-info {
-            margin-top: 25px;
-            padding: 15px;
-            background: #fdfdfd;
-            border-left: 4px solid #007bff;
+        /* 5. 链接颜色修正 - 彻底去掉蓝色 */
+        a {
+            color: #444;
+            text-decoration: none;
+            transition: 0.2s;
         }
 
-        /* 5. 手机端适配：屏幕窄时变一栏 */
+        a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        /* 6. Contact 部分放在最底部的样式 */
+        .contact-section {
+            margin-top: 50px;
+            padding-top: 20px;
+        }
+
+        /* 手机端适配 */
         @media (max-width: 768px) {
-            .header-nav {
+            .header-nav, .main-content {
                 flex-direction: column;
-                align-items: flex-start;
             }
             .nav-links {
                 margin-top: 15px;
@@ -117,11 +127,8 @@
                 margin-left: 0;
                 margin-right: 20px;
             }
-            .main-content {
-                flex-direction: column;
-            }
             .photo-area {
-                order: -1; /* 手机上照片显示在文字上方 */
+                order: -1;
                 width: 100%;
                 text-align: center;
                 margin-bottom: 30px;
@@ -135,13 +142,12 @@
 <body>
 
     <header class="header-nav">
-        <a href="index.html" class="name-brand">Xiaocao Lu <span class="chinese">陆晓草</span></a>
+        <a href="index.html" class="name-brand">Xiaocao Lu <span class="chinese">逯小草</span></a>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="#">Research</a>
-            <a href="#">CV</a>
+            <a href="#">Resume</a>
             <a href="#">Hobbies</a>
-            <a href="#">Contact</a>
         </nav>
     </header>
 
@@ -155,23 +161,28 @@
                 I earned dual bachelor’s degrees from <strong>Hainan University</strong> and <strong>Arizona State University</strong>, followed by a Master's degree from <strong>The Chinese University of Hong Kong</strong>.
             </p>
 
-            <div class="contact-info">
-                <strong>Email:</strong> <a href="mailto:xclu1@asu.edu">xclu1@asu.edu</a>
-            </div>
-
             <h2>Research Interests</h2>
             <ul>
-                <li><strong>Climate Change:</strong> Impacts on destination resilience.</li>
-                <li><strong>Consumer Behavior:</strong> Health-related decision making.</li>
-                <li><strong>Sustainability:</strong> Interdisciplinary applications in biotechnology.</li>
+                <li>Climate Change</li>
+                <li>Consumer Behavior</li>
+                <li>Sustainability</li>
+                <li>Travel Intentions</li>
+                <li>Destination Resilience</li>
             </ul>
 
             <h2>Education</h2>
             <ul>
                 <li><strong>M.S. in Biotechnology</strong>, Harrisburg University, 2024-Present</li>
                 <li><strong>M.S. in Sustainable Tourism</strong>, The Chinese University of Hong Kong, 2023</li>
-                <li><strong>B.S. in Management</strong>, ASU & Hainan University, 2022</li>
+                <li><strong>B.S. in Tourism Development and Management</strong>, Arizona State University, 2022</li>
+                <li><strong>B.S. in Hotel Management</strong>, Hainan University, 2022</li>
             </ul>
+
+            <h2 id="contact">Contact</h2>
+            <div class="contact-section">
+                <p><strong>Email:</strong> <a href="mailto:xclu1@asu.edu">xclu1@asu.edu</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/messaging/thread/2-ZGIzMzA0YmYtOTUxYi00ZmQzLTkxODEtYWEzN2Q3ZThmNTdiXzEwMA==/" target="_blank">Profile</a></p>
+            </div>
         </div>
 
         <div class="photo-area">
