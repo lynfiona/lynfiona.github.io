@@ -2,27 +2,100 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaocao Lu | Personal Website</title>
     <style>
+        /* 基础设置 */
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px auto;
-            max-width: 800px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 900px;
             line-height: 1.6;
-        }
-        nav {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
             color: #333;
-            font-weight: bold;
+            padding: 0 20px;
         }
-        h1 { margin-bottom: 5px; }
-        .info { color: #666; margin-bottom: 30px; }
+
+        /* 顶部导航容器：实现左边名字，右边菜单 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between; /* 左右撑开 */
+            align-items: baseline;        /* 底部对齐，看起来更整齐 */
+            padding: 20px 0;
+            border-bottom: 1px solid #eee; /* 下划线 */
+            margin-bottom: 40px;
+        }
+
+        /* 左侧名字样式 */
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+        .site-title .chinese-name {
+            font-size: 1.2rem;
+            margin-left: 10px;
+            color: #555;
+            font-weight: normal;
+        }
+
+        /* 右侧菜单样式 */
+        .nav-links {
+            display: flex;
+            gap: 20px; /* 链接之间的间距 */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #007bff; /* 蓝色链接 */
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 关于我部分的布局：左边文字，右边图片 */
+        .intro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        /* 手机端适配：屏幕太窄时自动堆叠 */
+        @media (max-width: 600px) {
+            .top-nav, .intro-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 10px;
+                gap: 10px;
+            }
+            .profile-pic {
+                order: -1; /* 手机上图片显示在文字上方 */
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
